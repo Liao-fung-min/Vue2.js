@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is my First VueCode</title>
+</head>
+
+<body>
+    <div id='app'>
+        {{message}}
+    </div>
+    <!-- Vue 的 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <!-- Vue 的程式碼 -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message:'Hello World!'
+            },
+        })
+    </script>
+
+</body>
+
+</html>
