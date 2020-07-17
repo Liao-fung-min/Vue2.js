@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For the Data binding</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    <div id="app">
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" v-bind:src="news.photo">
+                <div class="card-body">
+                    <h5 class="card-title">{{news.title}}</h5>
+                    <p class="card-text" style="font-size: 15px;">{{news.abstract}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        //使用物件
+        new Vue({
+            el: "#app",
+            data: {
+                news: {
+                    title: '這是標題',
+                    abstract: '這個臨時會會期開始，國民黨從議事程序的討論協商開始，就採取過去民進黨經常採取的霸佔議場、肢體衝突的抗爭模式。第一次的抗爭，只維持二十個小時，讓擅場武鬥的民進黨，迅速收拾戰場，惹來社會訕笑和不少名嘴的嘲諷。相對於過去民進黨受到的容忍，國民黨算是真正嚐到人情冷暖過去兩天，依照民進黨一黨強行通過的臨時會議程， 應該進行監察委員及正副院長提名人的審查程序， 但是因為在野黨的強力杯葛， 尤其是國民黨立委霸占議場、 霸占主席台的肢體抗爭， 審查程序無法進行。 民進黨揚言， 審查程序因為反對 ',
+                    photo: 'https://picsum.photos/200/300/?random'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

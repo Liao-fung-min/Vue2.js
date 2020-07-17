@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>測試v-con指令</title>
+    <title>This is my second Pratice</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
@@ -18,31 +18,39 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
-    <div id='app'>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" :placeholder="yourname" aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary" v-on:click="Hi">
-            <i class="fab fa-adobe"></i>
-        </button>
+    <div id="app">
+
+        <!-- <p v-html='message'></p> -->
+    </div>
+    <div id="content">
+        {{content}}
+    </div>
+    <div id="icon">
+        {{icon}}
+        <p v-html='icon'></p>
     </div>
     <script>
         new Vue({
-            el: '#app',
+            el: "#app",
             data: {
-                yourname: '填入你的名字'
+                message: '請參閱<a href="https://vuejs.org/">Vue.js</a>'
             },
-            methods: {
-                Hi() {
-                    alert(`HI,${this.yourname},歡迎使用Vue.js`);
-                }
-            }
 
-        })
+            template: " <h1>{{message}}</h1>"
+
+        });
+        new Vue({
+            el: "#content",
+            data: {
+                content: "Welcom to the Vue.js World"
+            }
+        });
+        new Vue({
+            el: "#icon",
+            data: {
+                icon: "&#8448;"
+            }
+        });
     </script>
 </body>
 
