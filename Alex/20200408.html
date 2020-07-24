@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex大大講解</title>
+</head>
+
+<body>
+    <div id='app'>
+        <p>版權所有 翻印必究</p>
+        <p>{{title}}</p>
+        <p>{{company}}</p>
+        <p>{{year}}</p>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+    <script>
+        let data = {
+            title: '這是題目',
+            company: '這是公司',
+            year: '@' + new Date().getFullYear(),
+
+        }
+
+        let vm = new Vue({
+            el: '#app',
+            data,
+        })
+    </script>
+</body>
+
+</html>
