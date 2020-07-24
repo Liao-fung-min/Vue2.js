@@ -21,11 +21,19 @@
             company: '這是公司',
             year: '@' + new Date().getFullYear(),
 
+
         }
+
 
         let vm = new Vue({
             el: '#app',
             data,
+            created: function () {
+                console.log(this);
+            },
+            created: () => {
+                console.log(this);
+            },
         })
     </script>
 </body>
