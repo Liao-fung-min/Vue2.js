@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3-1</title>
+
+</head>
+
+<body>
+    <div id="app" style="font-size: 100px;">
+        {{newMsg}}
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello',
+            },
+            computed: {
+                newMsg: {
+                    get() {
+                        console.log('newMsg')
+                        return 'new ' + this.message
+                    },
+                    set(val) {
+                        this.message = val + '(new)'
+                    },
+                },
+            },
+            methods: {
+
+            },
+        })
+    </script>
+</body>
+
+</html>
