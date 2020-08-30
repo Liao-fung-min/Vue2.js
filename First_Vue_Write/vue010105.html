@@ -7,8 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-   
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
 </head>
 
 <body>
@@ -18,23 +19,17 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
     <div id='app'>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" :placeholder="yourname" aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div>
-        </div>
+        {{message}}
     </div>
-    <button type="button" class="btn btn-primary"><i class="fab fa-adobe"></i></button>
-<script>
-    new Vue({
-        el:'#app',
-        data:{
-            yourname:'填入你的名字'
-        }
-    })
-</script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello world'
+            }
+        })
+    </script>
 </body>
 
 </html>
