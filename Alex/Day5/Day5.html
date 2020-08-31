@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5資料雙向綁定</title>
+    <link rel="stylesheet" href="./Day5.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <h2>
+                        <div class="input">
+                            {{name}} /
+                            {{sex}}性 /
+                            年齡為{{age}}
+                            <p id="favor">{{favor.length ? " 喜歡: " : " 沒興趣 "}}{{favor.join('、')}} </p>
+                            {{member? "已" : "還沒" }}成為會員
+                        </div>
+                    </h2>
+                    <div class="menu">
+                        <table>
+                            <tr>
+                                <td class="title"> 姓名:</td>
+                                <td><input v-model="name"></td>
+                            </tr>
+                            <tr>
+                                <td>型別:</td>
+                                <td>
+                                    <input type="radio" name="age" value="女" v-model="sex">女
+                                    <input type="radio" name="age" value="男" v-model="sex">男
+                                    <input type="radio" name="age" value="第三" v-model="sex">第三性
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>年齡:</td>
+                                <td>
+                                    <select v-model="age">
+                                        <option value="20歲以下">不到20歲</option>
+                                        <option value="20~30歲之間">20~30歲之間</option>
+                                        <option value="30~40歲之間">30~40歲之間</option>
+                                        <option value="40~50歲之間">40~50歲之間</option>
+                                        <option value="50歲之上">50歲之上</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>興趣:</td>
+                                <td>
+                                    <input type="checkbox" value="羽球" v-model="favor">羽球
+                                    <input type="checkbox" value="下棋" v-model="favor">下棋
+                                    <input type="checkbox" value="寫程式" v-model="favor">寫程式
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>會員:</td>
+                                <td>
+                                    <input type="checkbox" checked v-model="member">加入
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'></script>
+    <script src="./Day5.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+<script>
+
+</script>
+
+
+</html>
