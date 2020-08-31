@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is my First VueCode</title>
+</head>
+
+<body>
+    <div id='app'>
+        訊息:{{message}},
+        <br>
+        單價:{{price}}元,
+        <br>
+        數量:{{quantity}}個,
+        <br>
+        總金額{{price*quantity}}
+    </div>
+    <!-- Vue 的 CDN -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'></script>
+    <!-- Vue 的程式碼 -->
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!',
+                price: '500',
+                quantity: '2'
+            },
+        })
+    </script>
+
+</body>
+
+</html>
