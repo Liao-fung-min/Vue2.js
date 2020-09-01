@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9</title>
+    <link rel="stylesheet" href="./Day9.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        
+            <div class="container title mb-5 text-center">
+                <h1>{{ title }}</h1>
+                <img :src="today.src" class="img-fluid logo" id="img">
+            </div>
+        </transition>
+
+        <div class="d-flex justify-content-center">
+            <!--如果不是第一天就顯示 index != 0-->
+            <a class="left" v-if="index > 0" @click="changeIndex(-1)"></a>
+            <!-- appear是代表剛載入 -->
+            <transition name="fade" mode="out-in" appear>
+                <div class="p-3 bg-secondary" script="transform:scale3d(1.5,1.5,1)" v-for="(item,i) in menu"
+                    v-if="index === i" :key="item.title">
+                    <span id="number">第{{ i+1 }}筆</span>
+                    <span id="type">{{ item.type }}的</span>
+                    <a class="title" :href="item.link">{{ item.title }}</a>
+                </div>
+            </transition>
+            <!--如果不是最後一天就顯示 index != total-1 -->
+            <a class="right" v-if="index < total-1" @click="changeIndex(1)"></a>
+        </div>
+
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'></script>
+    <script src="./Day9.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.js'></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+
+</html>
