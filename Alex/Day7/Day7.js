@@ -73,6 +73,9 @@ let data = {
 let vm = new Vue({
     el: '#app',
     data: data,
+    methods: {
+        
+    },
     computed: {
         typeMenu() {
             if (this.input.type !== '全部') {

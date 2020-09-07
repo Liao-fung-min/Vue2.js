@@ -1,0 +1,23 @@
+{
+  "name": "vue2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Kuro_Hsu_Vue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json":"json-server --watch db.json --port 8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liao-fung-min/Vue2.js.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liao-fung-min/Vue2.js/issues"
+  },
+  "homepage": "https://github.com/Liao-fung-min/Vue2.js#readme",
+  "dependencies": {
+    "json-server": "^0.16.1"
+  }
+}
