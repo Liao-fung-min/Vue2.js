@@ -5,17 +5,18 @@ export default {
       text:{
           type:String,
           required:true,
-        //   default:''
+        //   default:''//如果沒有給的話你預設可以給
       }
   },
   computed: {
     inputText:{
-      get(){
+      
+      get(){//拿值
         return this.text
       },
-      set(val){
+      set(val){//給值
         // console.log(val)
-        this.$emit('Textchange',val)
+        this.$emit('update:text',val)
       }
     }
   },
